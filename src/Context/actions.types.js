@@ -1,0 +1,2 @@
+export const GIVEN_AMOUNT = "GIVEN_AMOUNT";
+export const RETURNED_AMOUNT = "RETURNED_AMOUNT";

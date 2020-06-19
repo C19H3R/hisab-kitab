@@ -1,24 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Button } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { TotalContext } from "../Context/TotalContext";
 
 const Total = () => {
+  const { TotalInterest} = useContext(TotalContext);
+  var formatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "INR",
+  });
   return (
     <div className="my-3 ">
       <div className="row">
         <div className="col">
-          <h3>TotalAmount: <span className="bg-dark  text-light">00.00</span></h3>
-        </div>
-
-        <div className="col">
-          <h3>Principle: <span className="bg-success">00.00</span></h3>
-        </div>
-        <div className="col">
-          <h3>Interest: <span className="bg-warning">00.00</span></h3>
+          <h3>Final-Interest: <span className="border border-dark rounded px-2">{formatter.format(TotalInterest)}</span></h3>
         </div>
       </div>
-
-      <Button className="my-2">CALCULATE</Button>
     </div>
   );
 };

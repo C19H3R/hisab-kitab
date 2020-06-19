@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { InputGroup, InputGroupAddon, Button, Input } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import TotalLeft from "./TotalLeft";
 import GivenAmounts from "./GivenAmounts";
+
+import { TotalContext } from "../../Context/TotalContext";
+import { GIVEN_AMOUNT } from "../../Context/actions.types";
 
 const Left = () => {
   const [leftAmount, setLeftAmount] = useState([]);
@@ -10,6 +13,8 @@ const Left = () => {
   const [date, setDate] = useState("");
   const [totalTaken, setTotalTaken] = useState(0);
   const [leftInterest, setLeftInterest] = useState(0);
+  const { dispatch } = useContext(TotalContext);
+
   var formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "INR",
@@ -33,7 +38,7 @@ const Left = () => {
     console.log(presentDay + "/" + presentMonth + "/" + presentYear);
     console.log(givingDay + "/" + givingMonth + "/" + givingYear);
 
-    var countMonths=0;
+    var countMonths = 0;
 
     if (givingYear === presentYear) {
       if (
@@ -49,7 +54,7 @@ const Left = () => {
         countMonths = presentMonth - givingMonth + 1;
       }
     }
-    if (presentYear> givingYear) {
+    if (presentYear > givingYear) {
       if (givingMonth === presentMonth) {
         if (
           (givingDay < 15 && presentDay < 15) ||
@@ -96,12 +101,16 @@ const Left = () => {
     console.log(countMonths);
 
     const Interest = amount * 0.02 * countMonths;
-    console.log(Interest);
+    console.log(Interest + "INTEREST");
     setLeftInterest(parseFloat(leftInterest) + parseFloat(Interest));
     const x = {
       amount,
       date,
     };
+    dispatch({
+      type: GIVEN_AMOUNT,
+      payload: Interest,
+    });
     setLeftAmount([...leftAmount, x]);
     setAmount("");
     setDate("");

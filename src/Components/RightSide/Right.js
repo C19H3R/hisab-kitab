@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { InputGroup, InputGroupAddon, Button, Input } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import TotalRight from "./TotalRight";
 import ReturnedAmounts from "./ReturnedAmounts";
+import { TotalContext } from "../../Context/TotalContext";
+import { RETURNED_AMOUNT } from "../../Context/actions.types";
 
 const Right = () => {
   const [rightAmount, setRightAmount] = useState([]);
@@ -10,6 +12,7 @@ const Right = () => {
   const [date, setDate] = useState("");
   const [totalTaken, setTotalTaken] = useState(0);
   const [rightInterest, setRightInterest] = useState(0);
+  const {dispatch} = useContext(TotalContext)
   var formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "INR",
@@ -102,6 +105,10 @@ const Right = () => {
       amount,
       date,
     };
+    dispatch({
+      type: RETURNED_AMOUNT,
+      payload: Interest,
+    });
     setRightAmount([...rightAmount, x]);
     setAmount("");
     setDate("");
