@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/hisab-kitab/precache-manifest.a368c445ef16b46f2dd3c498a843b7dc.js"
+  "/hisab-kitab/precache-manifest.51cfa4dba923db57dd6c80a72eae726c.js"
 );
 
 self.addEventListener('message', (event) => {
