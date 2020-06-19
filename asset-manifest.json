@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/hisab-kitab/static/js/main.8bf2b755.chunk.js",
-    "main.js.map": "/hisab-kitab/static/js/main.8bf2b755.chunk.js.map",
+    "main.js": "/hisab-kitab/static/js/main.7aa5af6b.chunk.js",
+    "main.js.map": "/hisab-kitab/static/js/main.7aa5af6b.chunk.js.map",
     "runtime-main.js": "/hisab-kitab/static/js/runtime-main.4a74149d.js",
     "runtime-main.js.map": "/hisab-kitab/static/js/runtime-main.4a74149d.js.map",
     "static/css/2.af3c1da9.chunk.css": "/hisab-kitab/static/css/2.af3c1da9.chunk.css",
     "static/js/2.c7435480.chunk.js": "/hisab-kitab/static/js/2.c7435480.chunk.js",
     "static/js/2.c7435480.chunk.js.map": "/hisab-kitab/static/js/2.c7435480.chunk.js.map",
     "index.html": "/hisab-kitab/index.html",
-    "precache-manifest.a368c445ef16b46f2dd3c498a843b7dc.js": "/hisab-kitab/precache-manifest.a368c445ef16b46f2dd3c498a843b7dc.js",
+    "precache-manifest.51cfa4dba923db57dd6c80a72eae726c.js": "/hisab-kitab/precache-manifest.51cfa4dba923db57dd6c80a72eae726c.js",
     "service-worker.js": "/hisab-kitab/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/hisab-kitab/static/css/2.af3c1da9.chunk.css.map",
     "static/js/2.c7435480.chunk.js.LICENSE.txt": "/hisab-kitab/static/js/2.c7435480.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.4a74149d.js",
     "static/css/2.af3c1da9.chunk.css",
     "static/js/2.c7435480.chunk.js",
-    "static/js/main.8bf2b755.chunk.js"
+    "static/js/main.7aa5af6b.chunk.js"
   ]
 }

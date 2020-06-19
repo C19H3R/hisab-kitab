@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "74a1a93c71b382fe791f723c796fea5f",
+    "revision": "89fdf61082fb4abb124ea2713a6fb271",
     "url": "/hisab-kitab/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hisab-kitab/static/js/2.c7435480.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "230a2de4a1b1d3f03ee8",
-    "url": "/hisab-kitab/static/js/main.8bf2b755.chunk.js"
+    "revision": "599ed086d2614f2d3f91",
+    "url": "/hisab-kitab/static/js/main.7aa5af6b.chunk.js"
   },
   {
     "revision": "dcae68fcb6a3722e456c",
